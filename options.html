@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>擴充功能設定 | 翻譯蒟蒻 (Translation Gummy)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    h1 {
+      color: #333;
+    }
+    label {
+      display: block;
+      margin-top: 20px;
+    }
+    input[type="text"], select {
+      width: 100%;
+      padding: 5px;
+      margin-top: 5px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    #status {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>擴充功能設定 Settings</h1>
+
+    <label for="enableExtension">啟用擴充功能 Enable Extension：</label>
+    <label class="switch">
+      <input type="checkbox" id="enableExtension" checked>
+      Enable
+    </label>
+
+    <label for="apiKey">OpenAI API Key：</label>
+    <input type="text" id="apiKey">
+    <label for="aiModel">AI Models：</label>
+    <select id="aiModel">
+      <option value="gpt-3.5-turbo">GPT-3.5 Turbo</option>
+      <option value="gpt-4o">GPT-4o</option>
+    </select>
+    <label for="targetLanguage">翻譯語言 Translation: </label>
+    <select id="targetLanguage">
+      <option value="zh-TW">繁體中文 - Traditional Chinese</option>
+      <option value="en">英語 - English</option>
+      <option value="ja">日語 - Japanese</option>
+      <option value="ko">韓語 - Korean</option>
+    </select>
+    <button id="save">更新 Update</button>
+    <div id="status"></div>
+  </div>
+  <script src="options.js"></script>
+</body>
+</html>

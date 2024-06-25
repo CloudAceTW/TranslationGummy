@@ -1,0 +1,93 @@
+.text-selector-btn,
+.text-summary-btn {
+  position: absolute;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  z-index: 10000;
+  transition: background-color 0.3s;
+}
+
+.text-summary-btn {
+  background-color: #008CBA;
+}
+
+.text-selector-btn.loading,
+.text-summary-btn.loading {
+  cursor: wait;
+}
+
+.text-selector-btn.loading::after,
+.text-summary-btn.loading::after {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-left: 5px;
+  border: 2px solid #ffffff;
+  border-top: 2px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.translation-result {
+  position: absolute;
+  background-color: white;
+  color: #444;
+  border: 1px solid #ddd;
+  padding: 10px;
+  /* TODO: 增加文字大小 */
+  font-size: 16px; /* 從原來的 14px 改為 16px */
+  line-height: 1.5; /* 添加行高以提高可讀性 */
+  max-width: 400px; /* 增加最大寬度，以適應更大的文字 */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  z-index: 10001;
+  user-select: text;
+}
+
+/* 可以考慮添加以下樣式來改善整體閱讀體驗 */
+.translation-result p {
+  margin: 0 0 10px 0; /* 段落間距 */
+}
+
+.translation-result:first-child {
+  margin-top: 0; /* 移除第一個元素的上邊距 */
+}
+
+.translation-result:last-child {
+  margin-bottom: 0; /* 移除最後一個元素的下邊距 */
+}
+
+.play-audio-btn {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.translation-result {
+  /* existing styles */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}

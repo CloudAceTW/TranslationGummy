@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "翻譯蒟蒻 (Translation Gummy)",
+  "version": "1.0",
+  "description": "翻譯蒟蒻 (Translation Gummy)是一個 Chrome Extension，可以透過選擇文字去透過 Open AI API 翻譯文字內容，以及摘要文字內容，並將文字內容播放給你。",
+  "permissions": ["activeTab", "storage", "tts"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["content.css"]
+    }
+  ],
+  "icons": {
+    "48": "images/icon.png",
+    "128": "images/icon.png"
+  },
+  "host_permissions": ["https://api.openai.com/*"],
+  "options_page": "options.html",
+  "action": {},
+  "background": {
+    "service_worker": "background.js"
+  }
+}
