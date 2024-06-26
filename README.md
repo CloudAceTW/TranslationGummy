@@ -12,6 +12,10 @@
 
 Translation Gummy is a Chrome Extension that allows you to translate text content using the OpenAI API by selecting text, summarize text content, and play the text content for you.
 
+## Demo
+
+[![Watch the video](assets/output.webp)](assets/output.webp)
+
 ## 功能 Features
 
 - **文字翻譯**：選擇網頁上的文字並翻譯成指定的語言。
