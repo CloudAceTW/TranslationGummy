@@ -27,7 +27,7 @@ function restoreOptions() {
   chrome.storage.sync.get(
     {
       apiKey: '',
-      aiModel: 'gpt-3.5-turbo',
+      aiModel: 'gpt-4o-mini',
       targetLanguage: 'zh-TW',
       enableExtension: true
     },

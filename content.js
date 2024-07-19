@@ -150,13 +150,13 @@ const showTranslationResult = async (text) => {
   const textElement = createElementWithProperties('p', { textContent: text })
   translationResult.appendChild(textElement)
 
-  try {
-    const audioUrl = await generateSpeech(text)
-    const playButton = createPlayButton(audioUrl)
-    translationResult.appendChild(playButton)
-  } catch (error) {
-    console.error('音頻生成錯誤：', error)
-  }
+  // try {
+  //   const audioUrl = await generateSpeech(text)
+  //   const playButton = createPlayButton(audioUrl)
+  //   translationResult.appendChild(playButton)
+  // } catch (error) {
+  //   console.error('音頻生成錯誤：', error)
+  // }
 }
 
 const createPlayButton = (audioUrl) => {
@@ -204,7 +204,7 @@ const performApiRequest = (text, role) => {
       }
 
       const targetLanguage = data.targetLanguage || 'zh-TW'
-      const aiModel = data.aiModel || 'gpt-3.5-turbo'
+      const aiModel = data.aiModel || 'gpt-4o-mini'
       const languageNames = {
         'zh-TW': 'Traditional Chinese',
         en: 'English',
